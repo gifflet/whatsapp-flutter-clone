@@ -66,10 +66,11 @@ class StatusScreen extends StatelessWidget {
                     leading: CircleAvatar(
                       radius: 30,
                       backgroundImage: NetworkImage(
-                          "https://pbs.twimg.com/media/EClDvMXU4AAw_lt?format=jpg&name=medium"),
+                          "https://avatars1.githubusercontent.com/u/33522742"),
                     ),
                     title: Text(
                       "Pawan Kumar",
+                      semanticsLabel: 'contact-name',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text("Today, 20:16 PM"),

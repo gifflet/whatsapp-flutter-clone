@@ -19,35 +19,33 @@ class ChatScreenState extends State<ChatScreen> {
                 height: 10.0,
               ),
               new ListTile(
-                leading: Center(
-                  child: new CircleAvatar(
-                    key: Key("avatar-photo"),
-                    foregroundColor: Theme.of(context).primaryColor,
-                    backgroundColor: Colors.grey,
-                    backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
-                  ),
+                leading: new CircleAvatar(
+                  key: Key("avatar-photo"),
+                  foregroundColor: Theme.of(context).primaryColor,
+                  backgroundColor: Colors.grey,
+                  backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
                 ),
-                title: Center(
-                  child: new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      new Text(
-                        dummyData[i].name,
-                        key: Key("contact-name"),
-                        style: new TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      new Text(
-                        dummyData[i].time,
-                        style: new TextStyle(color: Colors.grey, fontSize: 14.0),
-                      ),
-                    ],
-                  ),
+                title: new Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    new Text(
+                      dummyData[i].name,
+                      key: Key("contact-name"),
+                      style: new TextStyle(fontWeight: FontWeight.bold),
+                      semanticsLabel: 'contact-name',
+                    ),
+                    new Text(
+                      dummyData[i].time,
+                      style: new TextStyle(color: Colors.grey, fontSize: 14.0),
+                    ),
+                  ],
                 ),
                 subtitle: new Container(
                   padding: const EdgeInsets.only(top: 5.0),
                   child: new Text(
                     dummyData[i].message,
                     key: Key("message"),
+                    semanticsLabel: 'message',
                     style: new TextStyle(color: Colors.grey, fontSize: 15.0),
                   ),
                 ),
