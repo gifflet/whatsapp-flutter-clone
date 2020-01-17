@@ -37,9 +37,11 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        key: Key("app-title"),
         title: Text("WhatsApp"),
         elevation: 0.7,
         bottom: TabBar(
+          key: Key("tab"),
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
@@ -72,6 +74,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
       ),
       floatingActionButton: showFab
           ? FloatingActionButton(
+              key: Key("btnOpenChat"),
               backgroundColor: Theme.of(context).accentColor,
               child: Icon(
                 Icons.message,
