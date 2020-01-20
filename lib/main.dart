@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:flutter_driver/driver_extension.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterwhatsapp/whatsapp_home.dart';
@@ -7,7 +7,11 @@ import 'package:flutterwhatsapp/whatsapp_home.dart';
 List<CameraDescription> cameras;
 
 Future<Null> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  //TestWidgetsFlutterBinding.ensureInitialized()
+  //Release application
+  //WidgetsFlutterBinding.ensureInitialized();
+  //Debug Application
+  enableFlutterDriverExtension();
   cameras = await availableCameras();
   runApp(new MyApp());
 }
