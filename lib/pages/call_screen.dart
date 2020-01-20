@@ -7,6 +7,8 @@ class CallsScreen extends StatelessWidget {
       child: new Text(
         "Calls",
         style: new TextStyle(fontSize: 20.0),
+        key: Key("lblCalls"),
+        semanticsLabel: 'Calls',
       ),
     );
   }

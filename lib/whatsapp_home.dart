@@ -45,13 +45,13 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
-            Tab(icon: Icon(Icons.camera_alt)),
-            Tab(text: "CHATS"),
+            Tab(icon: Icon(Icons.camera_alt), key: Key("cameraTab")),
+            Tab(text: "CHATS", key: Key("chatsTab")),
             Tab(
-              text: "STATUS",
+              text: "STATUS", key: Key("statusTab")
             ),
             Tab(
-              text: "CALLS",
+              text: "CALLS", key: Key("callsTab")
             ),
           ],
         ),

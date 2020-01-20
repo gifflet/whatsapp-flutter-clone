@@ -63,17 +63,20 @@ class StatusScreen extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
                   ListTile(
+                    key: Key("statusList"),
                     leading: CircleAvatar(
                       radius: 30,
                       backgroundImage: NetworkImage(
                           "https://avatars1.githubusercontent.com/u/33522742"),
+                        key: Key("contact-photo")
                     ),
                     title: Text(
                       "Pawan Kumar",
+                      key: Key("contact-name"),
                       semanticsLabel: 'contact-name',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text("Today, 20:16 PM"),
+                    subtitle: Text("Today, 20:16 PM", key: Key("statusDate"), semanticsLabel: 'statusDate'),
                     onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(

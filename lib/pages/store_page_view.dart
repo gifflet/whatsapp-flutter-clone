@@ -20,7 +20,7 @@ you will be forced to make time for your illness.
         storyItems,
         controller: controller,
         inline: false,
-        repeat: true,
+        repeat: false,
       ),
     );
   }
